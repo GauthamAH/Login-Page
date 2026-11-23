@@ -1,0 +1,295 @@
+
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.a1 {
+    min-height: 100vh;
+    background: linear-gradient(
+        344deg,
+        #001f8f,
+        #4169e1,
+        #a855f7,
+        #f9a8d4
+    );
+}
+
+/* =========================
+   DESKTOP LAYOUT
+========================= */
+
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    position: relative;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Left section */
+
+.left-section {
+    width: 48%;
+    min-height: 100vh;
+    background: white;
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+}
+
+.a2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.a2 h4 {
+    color: #0756D8;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.a2 h2 {
+    font-size: 45px;
+    color: #102957;
+    margin: 10px 0 20px;
+}
+
+.a2 p {
+    font-size: 21px;
+    color: #52647D;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Centre wave */
+
+.wave {
+    position: absolute;
+    left: 45%;
+    top: 0;
+    width: 230px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Right section */
+
+.right-section {
+    flex: 1;
+    min-width: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 40px 45px 40px 200px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 3;
+}
+
+.b {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Mission, Vision and Values */
+
+.b1,
+.b2,
+.b3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+    padding: 20px 0;
+}
+
+.b h2 {
+    font-size: 32px;
+    color: white;
+    margin: 0 0 12px;
+}
+
+.b p {
+    font-size: 19px;
+    color: white;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.b hr {
+    width: 100%;
+    border: none;
+    border-top: 1px solid lightblue;
+    margin: 15px 0;
+}
+
+/* Icons */
+
+.card-icon {
+    min-width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #C9E2FF;
+}
+
+.card-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.card-content h2 {
+    margin: 0 0 12px;
+}
+
+.card-content p {
+    margin: 0;
+}
+
+/* =========================
+   TABLET AND MOBILE
+========================= */
+
+@media (max-width: 1100px) {
+
+    .hero-section {
+        flex-direction: column;
+        align-items: stretch;
+        min-height: auto;
+        height: auto;
+        gap: 0;
+        overflow: visible;
+    }
+
+    /* Hide vertical wave */
+
+    .wave {
+        display: none;
+    }
+
+    /* About section */
+
+    .left-section {
+        width: 100%;
+        min-height: auto;
+        padding: 50px 35px;
+    }
+
+    .a2 h2 {
+        font-size: 36px;
+    }
+
+    .a2 h4 {
+        font-size: 18px;
+    }
+
+    .a2 p {
+        font-size: 18px;
+        line-height: 1.6;
+    }
+
+    /* Mission, Vision and Values */
+
+    .right-section {
+        width: 100%;
+        min-height: auto;
+        padding: 35px;
+        background: linear-gradient(
+            344deg,
+            #001f8f,
+            #4169e1,
+            #a855f7
+        );
+    }
+
+    .b {
+        width: 100%;
+        padding: 0;
+    }
+
+    .b1,
+    .b2,
+    .b3 {
+        gap: 20px;
+        padding: 20px 0;
+    }
+
+    .b h2 {
+        font-size: 27px;
+    }
+
+    .b p {
+        font-size: 17px;
+        line-height: 1.6;
+    }
+
+    .card-icon {
+        min-width: 45px;
+        height: 45px;
+    }
+
+    .a1 {
+        min-height: 100vh;
+        height: auto;
+        overflow: visible;
+    }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+    .left-section {
+        padding: 40px 24px;
+    }
+
+    .a2 h4 {
+        font-size: 16px;
+    }
+
+    .a2 h2 {
+        font-size: 30px;
+    }
+
+    .a2 p {
+        font-size: 16px;
+    }
+
+    .right-section {
+        padding: 25px 24px;
+    }
+
+    .b1,
+    .b2,
+    .b3 {
+        gap: 15px;
+        padding: 18px 0;
+    }
+
+    .b h2 {
+        font-size: 23px;
+    }
+
+    .b p {
+        font-size: 15px;
+    }
+
+    .card-icon {
+        min-width: 40px;
+        height: 40px;
+    }
+}
